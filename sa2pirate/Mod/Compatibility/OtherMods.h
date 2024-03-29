@@ -1,3 +1,3 @@
 #pragma once
 
-void OverwriteTextForMenuOverhaul(const HelperFunctions& helperFunctions);
+void InitOtherMods(const HelperFunctions& helperFunctions);

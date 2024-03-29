@@ -14,7 +14,7 @@ extern "C"
 		SetUpFont(modPath);
 		LoadFiles(helperFunctions);
 		InitExeText();
-		OverwriteTextForMenuOverhaul(helperFunctions);		
+		InitOtherMods(helperFunctions);		
 	}	
 	
 	__declspec(dllexport) ModInfo SA2ModInfo = { ModLoaderVer };

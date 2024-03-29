@@ -1,5 +1,9 @@
 ﻿#include "pch.h"
-#include "Mod.h"
+#include "Config/Config.h"
+#include "Compatibility/MenuOverhaul.h"
+#include "Font Setup/FontSetup.h"
+#include "File Loading/LoadFiles.h"
+#include "Text/ExeText.h"
 
 
 extern "C"

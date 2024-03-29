@@ -1,7 +1,5 @@
 #include "pch.h"
-#include "Mod.h"
-#include <string>
-#include <vector>
+#include "../Config/Config.h"
 #include <fstream>
 
 

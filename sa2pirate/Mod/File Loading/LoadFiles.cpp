@@ -1,6 +1,5 @@
 #include "pch.h"
-#include "Mod.h"
-#include <vector>
+#include "../Config/Config.h"
 
 
 void ReplacePak(const std::string& file, const HelperFunctions& helperFunctions)

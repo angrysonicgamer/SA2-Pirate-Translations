@@ -1,6 +1,7 @@
 #include "pch.h"
-#include "Mod.h"
-#include "Include/IniFile.h"
+#include "../Config/Config.h"
+#include "../Text/ExeText.h"
+#include "../../Include/Mod Loader Common/IniFile.hpp"
 
 
 HMODULE MenuOverhaul = GetModuleHandle(L"MenuOverhaul"); //Init Menu Overhaul dll

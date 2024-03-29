@@ -1,60 +1,124 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Include">
+      <UniqueIdentifier>{22e7a412-1614-4440-8429-24f9026e4bf1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Include\SA2 Mod Loader">
+      <UniqueIdentifier>{3ef73739-5924-44d2-a13c-756ae7141cad}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Include\Mod Loader Common">
+      <UniqueIdentifier>{f04f8c07-12b5-4a9e-9e9f-af90212fc663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mod">
+      <UniqueIdentifier>{63a35a43-9f88-4387-9f26-7e41fd9e713e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mod\Config">
+      <UniqueIdentifier>{2191d4ab-b58c-4783-9f47-b2087da9ed37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mod\Compatibility">
+      <UniqueIdentifier>{48fe3cf6-8f45-4681-90e1-8195745bdff1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mod\Font Setup">
+      <UniqueIdentifier>{00195b1c-7d3d-48d9-9dd7-0369babdee60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mod\File Loading">
+      <UniqueIdentifier>{425ffbfc-83eb-49bf-9a56-7aaa7d105e61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mod\Text">
+      <UniqueIdentifier>{dec5846f-2f80-4fee-9dd8-1f8db3e2b299}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Include\SA2 Mod Loader\magic.h">
+      <Filter>Include\SA2 Mod Loader</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Include\SA2 Mod Loader\MemAccess.h">
+      <Filter>Include\SA2 Mod Loader</Filter>
     </ClInclude>
-    <ClInclude Include="Mod.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Include\SA2 Mod Loader\ninja.h">
+      <Filter>Include\SA2 Mod Loader</Filter>
     </ClInclude>
-    <ClInclude Include="Include\IniFile.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Include\SA2 Mod Loader\njdef.h">
+      <Filter>Include\SA2 Mod Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SA2 Mod Loader\SA2Enums.h">
+      <Filter>Include\SA2 Mod Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SA2 Mod Loader\SA2Functions.h">
+      <Filter>Include\SA2 Mod Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SA2 Mod Loader\SA2ModInfo.h">
+      <Filter>Include\SA2 Mod Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SA2 Mod Loader\SA2ModLoader.h">
+      <Filter>Include\SA2 Mod Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SA2 Mod Loader\SA2Structs.h">
+      <Filter>Include\SA2 Mod Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SA2 Mod Loader\SA2Variables.h">
+      <Filter>Include\SA2 Mod Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Mod Loader Common\IniFile.hpp">
+      <Filter>Include\Mod Loader Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Mod Loader Common\stdafx.h">
+      <Filter>Include\Mod Loader Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Mod Loader Common\targetver.h">
+      <Filter>Include\Mod Loader Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Mod Loader Common\TextConv.hpp">
+      <Filter>Include\Mod Loader Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Mod Loader Common\Utils.hpp">
+      <Filter>Include\Mod Loader Common</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Mod\Config\Config.h">
+      <Filter>Mod\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Mod\Compatibility\MenuOverhaul.h">
+      <Filter>Mod\Compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="Mod\Font Setup\FontSetup.h">
+      <Filter>Mod\Font Setup</Filter>
+    </ClInclude>
+    <ClInclude Include="Mod\File Loading\LoadFiles.h">
+      <Filter>Mod\File Loading</Filter>
+    </ClInclude>
+    <ClInclude Include="Mod\Text\ExeText.h">
+      <Filter>Mod\Text</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Include\Mod Loader Common\IniFile.cpp">
+      <Filter>Include\Mod Loader Common</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Include\Mod Loader Common\TextConv.cpp">
+      <Filter>Include\Mod Loader Common</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Mod\Config\Config.cpp">
+      <Filter>Mod\Config</Filter>
     </ClCompile>
-    <ClCompile Include="FontSetup.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Mod\Compatibility\MenuOverhaul.cpp">
+      <Filter>Mod\Compatibility</Filter>
     </ClCompile>
-    <ClCompile Include="ExeText.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Mod\Font Setup\FontSetup.cpp">
+      <Filter>Mod\Font Setup</Filter>
     </ClCompile>
-    <ClCompile Include="MenuOverhaul.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Mod\File Loading\LoadFiles.cpp">
+      <Filter>Mod\File Loading</Filter>
     </ClCompile>
-    <ClCompile Include="Config.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Mod\Text\ExeText.cpp">
+      <Filter>Mod\Text</Filter>
     </ClCompile>
-    <ClCompile Include="LoadFiles.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Include\IniFile.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Mod\Main.cpp">
+      <Filter>Mod</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

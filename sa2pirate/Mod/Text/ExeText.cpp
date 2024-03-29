@@ -1,6 +1,6 @@
 ﻿#include "pch.h"
-#include "Mod.h"
-#include <vector>
+#include "../Config/Config.h"
+#include "ExeText.h"
 
 
 #pragma region Kudos

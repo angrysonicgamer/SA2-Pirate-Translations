@@ -292,10 +292,10 @@ void LoadFiles(const HelperFunctions& helperFunctions)
 		LoadFileList(VectorOnlyPakList, ReplacePak, helperFunctions);
 		ReplaceMessageFile("mh0016e", helperFunctions);
 		ReplaceMessageFile("mh0020e", helperFunctions);
-
-		HMODULE cutsceneRevamp = GetModuleHandle(L"CutsceneRevamp");
-		if (cutsceneRevamp == nullptr) return;
-
-		LoadFileList(CutsceneTextureFiles, ReplaceCutsceneRevampPak, helperFunctions);
 	}
+}
+
+void LoadCutsceneRevampFiles(const HelperFunctions& helperFunctions)
+{
+	LoadFileList(CutsceneTextureFiles, ReplaceCutsceneRevampPak, helperFunctions);
 }

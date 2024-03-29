@@ -1,11 +1,16 @@
 #include "pch.h"
 #include "../Config/Config.h"
+#include "../File Loading/LoadFiles.h"
 #include "../Text/ExeText.h"
 #include "../../Include/Mod Loader Common/IniFile.hpp"
 
 
 HMODULE MenuOverhaul = GetModuleHandle(L"MenuOverhaul"); //Init Menu Overhaul dll
+HMODULE CutsceneRevamp = GetModuleHandle(L"CutsceneRevamp"); //Init Cutscene Revamp dll
 bool DisablePauseTweaks;
+
+
+/* Menu Overhaul */
 
 struct TextToOverwrite
 {
@@ -55,5 +60,19 @@ void OverwriteTextForMenuOverhaul(const HelperFunctions& helperFunctions)
 	else
 	{
 		OverwriteText(VectorText);
+	}
+}
+
+
+void InitOtherMods(const HelperFunctions& helperFunctions)
+{
+	if (CutsceneRevamp && GetTranslationType() == "Vector")
+	{
+		LoadCutsceneRevampFiles(helperFunctions);
+	}
+
+	if (MenuOverhaul)
+	{
+		OverwriteTextForMenuOverhaul(helperFunctions);
 	}
 }

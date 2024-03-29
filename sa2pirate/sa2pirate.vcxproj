@@ -35,7 +35,7 @@
     <ClInclude Include="Include\SA2 Mod Loader\SA2ModLoader.h" />
     <ClInclude Include="Include\SA2 Mod Loader\SA2Structs.h" />
     <ClInclude Include="Include\SA2 Mod Loader\SA2Variables.h" />
-    <ClInclude Include="Mod\Compatibility\MenuOverhaul.h" />
+    <ClInclude Include="Mod\Compatibility\OtherMods.h" />
     <ClInclude Include="Mod\Config\Config.h" />
     <ClInclude Include="Mod\File Loading\LoadFiles.h" />
     <ClInclude Include="Mod\Font Setup\FontSetup.h" />
@@ -46,7 +46,7 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Include\Mod Loader Common\IniFile.cpp" />
     <ClCompile Include="Include\Mod Loader Common\TextConv.cpp" />
-    <ClCompile Include="Mod\Compatibility\MenuOverhaul.cpp" />
+    <ClCompile Include="Mod\Compatibility\OtherMods.cpp" />
     <ClCompile Include="Mod\Config\Config.cpp" />
     <ClCompile Include="Mod\File Loading\LoadFiles.cpp" />
     <ClCompile Include="Mod\Font Setup\FontSetup.cpp" />

@@ -1,6 +1,6 @@
 ﻿#include "pch.h"
 #include "Config/Config.h"
-#include "Compatibility/MenuOverhaul.h"
+#include "Compatibility/OtherMods.h"
 #include "Font Setup/FontSetup.h"
 #include "File Loading/LoadFiles.h"
 #include "Text/ExeText.h"

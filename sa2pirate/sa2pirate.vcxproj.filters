@@ -80,7 +80,7 @@
     <ClInclude Include="Mod\Config\Config.h">
       <Filter>Mod\Config</Filter>
     </ClInclude>
-    <ClInclude Include="Mod\Compatibility\MenuOverhaul.h">
+    <ClInclude Include="Mod\Compatibility\OtherMods.h">
       <Filter>Mod\Compatibility</Filter>
     </ClInclude>
     <ClInclude Include="Mod\Font Setup\FontSetup.h">
@@ -105,7 +105,7 @@
     <ClCompile Include="Mod\Config\Config.cpp">
       <Filter>Mod\Config</Filter>
     </ClCompile>
-    <ClCompile Include="Mod\Compatibility\MenuOverhaul.cpp">
+    <ClCompile Include="Mod\Compatibility\OtherMods.cpp">
       <Filter>Mod\Compatibility</Filter>
     </ClCompile>
     <ClCompile Include="Mod\Font Setup\FontSetup.cpp">

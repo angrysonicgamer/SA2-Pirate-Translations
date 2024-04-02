@@ -10,7 +10,7 @@ extern "C"
 {
 	__declspec(dllexport) void Init(const char* modPath, const HelperFunctions& helperFunctions)
 	{
-		ReadConfig(modPath);
+		InitConfig(modPath);
 		SetUpFont(modPath);
 		LoadFiles(helperFunctions);
 		InitExeText();

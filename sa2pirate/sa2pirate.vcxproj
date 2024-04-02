@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Include\libmodutils\LandTableInfo.h" />
     <ClInclude Include="Include\Mod Loader Common\IniFile.hpp" />
     <ClInclude Include="Include\Mod Loader Common\stdafx.h" />
     <ClInclude Include="Include\Mod Loader Common\targetver.h" />
@@ -35,6 +36,7 @@
     <ClInclude Include="Include\SA2 Mod Loader\SA2ModLoader.h" />
     <ClInclude Include="Include\SA2 Mod Loader\SA2Structs.h" />
     <ClInclude Include="Include\SA2 Mod Loader\SA2Variables.h" />
+    <ClInclude Include="Mod\Anti-Piracy\CannonsCoreEggman.h" />
     <ClInclude Include="Mod\Compatibility\OtherMods.h" />
     <ClInclude Include="Mod\Config\Config.h" />
     <ClInclude Include="Mod\File Loading\LoadFiles.h" />
@@ -44,8 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Include\libmodutils\LandTableInfo.cpp" />
     <ClCompile Include="Include\Mod Loader Common\IniFile.cpp" />
     <ClCompile Include="Include\Mod Loader Common\TextConv.cpp" />
+    <ClCompile Include="Mod\Anti-Piracy\CannonsCoreEggman.cpp" />
     <ClCompile Include="Mod\Compatibility\OtherMods.cpp" />
     <ClCompile Include="Mod\Config\Config.cpp" />
     <ClCompile Include="Mod\File Loading\LoadFiles.cpp" />

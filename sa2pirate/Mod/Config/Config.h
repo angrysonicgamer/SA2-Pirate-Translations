@@ -1,4 +1,4 @@
 #pragma once
 
 std::string GetTranslationType();
-void ReadConfig(const char* modPath);
+void InitConfig(const char* modPath);

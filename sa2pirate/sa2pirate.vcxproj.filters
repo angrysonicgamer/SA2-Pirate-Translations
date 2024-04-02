@@ -28,6 +28,12 @@
     <Filter Include="Mod\Text">
       <UniqueIdentifier>{dec5846f-2f80-4fee-9dd8-1f8db3e2b299}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Mod\Anti-Piracy">
+      <UniqueIdentifier>{55534405-55bc-47b9-864a-741a7e1c8687}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\libmodutils">
+      <UniqueIdentifier>{8f187fdc-83b7-48dd-a546-25a060e9f9d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\SA2 Mod Loader\magic.h">
@@ -92,6 +98,12 @@
     <ClInclude Include="Mod\Text\ExeText.h">
       <Filter>Mod\Text</Filter>
     </ClInclude>
+    <ClInclude Include="Include\libmodutils\LandTableInfo.h">
+      <Filter>Include\libmodutils</Filter>
+    </ClInclude>
+    <ClInclude Include="Mod\Anti-Piracy\CannonsCoreEggman.h">
+      <Filter>Mod\Anti-Piracy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Include\Mod Loader Common\IniFile.cpp">
@@ -119,6 +131,12 @@
     </ClCompile>
     <ClCompile Include="Mod\Main.cpp">
       <Filter>Mod</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\libmodutils\LandTableInfo.cpp">
+      <Filter>Include\libmodutils</Filter>
+    </ClCompile>
+    <ClCompile Include="Mod\Anti-Piracy\CannonsCoreEggman.cpp">
+      <Filter>Mod\Anti-Piracy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

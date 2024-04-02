@@ -739,8 +739,6 @@ const std::vector<const char*> AdvertiseKudos
 
 std::vector<const char*> PauseMenuKudos
 {
-	/* Pause menu */
-
 	"\aDALEE   ",
 	"\a3AH0B0 ",
 	"",

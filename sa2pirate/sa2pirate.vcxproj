@@ -41,7 +41,9 @@
     <ClInclude Include="Mod\Config\Config.h" />
     <ClInclude Include="Mod\File Loading\LoadFiles.h" />
     <ClInclude Include="Mod\Font Setup\FontSetup.h" />
+    <ClInclude Include="Mod\Text\ExeText_Kudos.h" />
     <ClInclude Include="Mod\Text\ExeText.h" />
+    <ClInclude Include="Mod\Text\ExeText_Vector.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>

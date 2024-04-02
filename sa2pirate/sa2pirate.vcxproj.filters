@@ -104,6 +104,12 @@
     <ClInclude Include="Mod\Anti-Piracy\CannonsCoreEggman.h">
       <Filter>Mod\Anti-Piracy</Filter>
     </ClInclude>
+    <ClInclude Include="Mod\Text\ExeText_Kudos.h">
+      <Filter>Mod\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Mod\Text\ExeText_Vector.h">
+      <Filter>Mod\Text</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Include\Mod Loader Common\IniFile.cpp">

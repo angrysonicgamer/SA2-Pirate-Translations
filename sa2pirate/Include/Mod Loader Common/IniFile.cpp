@@ -4,7 +4,6 @@
  */
 
 #include "pch.h"
-#include "stdafx.h"
 #include "IniFile.hpp"
 #include "TextConv.hpp"
 #include "Utils.hpp"

@@ -69,12 +69,6 @@
     <ClInclude Include="Include\Mod Loader Common\IniFile.hpp">
       <Filter>Include\Mod Loader Common</Filter>
     </ClInclude>
-    <ClInclude Include="Include\Mod Loader Common\stdafx.h">
-      <Filter>Include\Mod Loader Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\Mod Loader Common\targetver.h">
-      <Filter>Include\Mod Loader Common</Filter>
-    </ClInclude>
     <ClInclude Include="Include\Mod Loader Common\TextConv.hpp">
       <Filter>Include\Mod Loader Common</Filter>
     </ClInclude>

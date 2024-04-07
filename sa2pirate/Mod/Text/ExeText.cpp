@@ -1,5 +1,5 @@
 ﻿#include "pch.h"
-#include "../Config/Config.h"
+#include "Mod/Config/Config.h"
 #include "ExeText.h"
 #include "ExeText_Kudos.h"
 #include "ExeText_Vector.h"

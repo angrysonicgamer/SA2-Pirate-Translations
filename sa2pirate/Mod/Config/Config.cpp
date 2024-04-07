@@ -1,6 +1,6 @@
 #include "pch.h"
-#include "../Anti-Piracy/CannonsCoreEggman.h"
-#include "../../Include/Mod Loader Common/IniFile.hpp"
+#include "Mod/Anti-Piracy/CannonsCoreEggman.h"
+#include "Include/Mod Loader Common/IniFile.hpp"
 
 
 std::string TranslationType;

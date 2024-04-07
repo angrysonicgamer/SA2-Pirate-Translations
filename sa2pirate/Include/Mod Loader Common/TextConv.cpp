@@ -4,7 +4,6 @@
  */
 
 #include "pch.h"
-#include "stdafx.h"
 #include "TextConv.hpp"
 
 #define WIN32_LEAN_AND_MEAN

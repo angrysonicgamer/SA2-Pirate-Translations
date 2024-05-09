@@ -1,15 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Include">
-      <UniqueIdentifier>{22e7a412-1614-4440-8429-24f9026e4bf1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Include\SA2 Mod Loader">
-      <UniqueIdentifier>{3ef73739-5924-44d2-a13c-756ae7141cad}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Include\Mod Loader Common">
-      <UniqueIdentifier>{f04f8c07-12b5-4a9e-9e9f-af90212fc663}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Mod">
       <UniqueIdentifier>{63a35a43-9f88-4387-9f26-7e41fd9e713e}</UniqueIdentifier>
     </Filter>
@@ -31,50 +22,8 @@
     <Filter Include="Mod\Anti-Piracy">
       <UniqueIdentifier>{55534405-55bc-47b9-864a-741a7e1c8687}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Include\libmodutils">
-      <UniqueIdentifier>{8f187fdc-83b7-48dd-a546-25a060e9f9d4}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\SA2 Mod Loader\magic.h">
-      <Filter>Include\SA2 Mod Loader</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\SA2 Mod Loader\MemAccess.h">
-      <Filter>Include\SA2 Mod Loader</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\SA2 Mod Loader\ninja.h">
-      <Filter>Include\SA2 Mod Loader</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\SA2 Mod Loader\njdef.h">
-      <Filter>Include\SA2 Mod Loader</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\SA2 Mod Loader\SA2Enums.h">
-      <Filter>Include\SA2 Mod Loader</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\SA2 Mod Loader\SA2Functions.h">
-      <Filter>Include\SA2 Mod Loader</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\SA2 Mod Loader\SA2ModInfo.h">
-      <Filter>Include\SA2 Mod Loader</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\SA2 Mod Loader\SA2ModLoader.h">
-      <Filter>Include\SA2 Mod Loader</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\SA2 Mod Loader\SA2Structs.h">
-      <Filter>Include\SA2 Mod Loader</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\SA2 Mod Loader\SA2Variables.h">
-      <Filter>Include\SA2 Mod Loader</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\Mod Loader Common\IniFile.hpp">
-      <Filter>Include\Mod Loader Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\Mod Loader Common\TextConv.hpp">
-      <Filter>Include\Mod Loader Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\Mod Loader Common\Utils.hpp">
-      <Filter>Include\Mod Loader Common</Filter>
-    </ClInclude>
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Mod\Config\Config.h">
@@ -92,9 +41,6 @@
     <ClInclude Include="Mod\Text\ExeText.h">
       <Filter>Mod\Text</Filter>
     </ClInclude>
-    <ClInclude Include="Include\libmodutils\LandTableInfo.h">
-      <Filter>Include\libmodutils</Filter>
-    </ClInclude>
     <ClInclude Include="Mod\Anti-Piracy\CannonsCoreEggman.h">
       <Filter>Mod\Anti-Piracy</Filter>
     </ClInclude>
@@ -106,12 +52,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Include\Mod Loader Common\IniFile.cpp">
-      <Filter>Include\Mod Loader Common</Filter>
-    </ClCompile>
-    <ClCompile Include="Include\Mod Loader Common\TextConv.cpp">
-      <Filter>Include\Mod Loader Common</Filter>
-    </ClCompile>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Mod\Config\Config.cpp">
@@ -131,9 +71,6 @@
     </ClCompile>
     <ClCompile Include="Mod\Main.cpp">
       <Filter>Mod</Filter>
-    </ClCompile>
-    <ClCompile Include="Include\libmodutils\LandTableInfo.cpp">
-      <Filter>Include\libmodutils</Filter>
     </ClCompile>
     <ClCompile Include="Mod\Anti-Piracy\CannonsCoreEggman.cpp">
       <Filter>Mod\Anti-Piracy</Filter>

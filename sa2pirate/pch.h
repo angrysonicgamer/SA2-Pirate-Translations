@@ -9,7 +9,7 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#include "Include/SA2 Mod Loader/SA2ModLoader.h"
+#include "SA2ModLoader.h"
 #include <string>
 #include <vector>
 

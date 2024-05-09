@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Config.h"
 #include "Mod/Anti-Piracy/CannonsCoreEggman.h"
-#include "Include/Mod Loader Common/IniFile.hpp"
+#include "IniFile.hpp"
 
 
 std::string Config::TranslationType;

@@ -2,7 +2,7 @@
 #include "Mod/Config/Config.h"
 #include "Mod/File Loading/LoadFiles.h"
 #include "Mod/Text/ExeText.h"
-#include "Include/Mod Loader Common/IniFile.hpp"
+#include "IniFile.hpp"
 
 
 HMODULE MenuOverhaul = GetModuleHandle(L"MenuOverhaul"); //Init Menu Overhaul dll

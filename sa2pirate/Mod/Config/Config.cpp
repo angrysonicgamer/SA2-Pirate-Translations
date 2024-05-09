@@ -1,18 +1,14 @@
 #include "pch.h"
+#include "Config.h"
 #include "Mod/Anti-Piracy/CannonsCoreEggman.h"
 #include "Include/Mod Loader Common/IniFile.hpp"
 
 
-std::string TranslationType;
-bool RecreateCCEggmanGlitch;
-
-std::string GetTranslationType()
-{
-	return TranslationType;
-}
+std::string Config::TranslationType;
+bool Config::RecreateCCEggmanGlitch;
 
 
-void ReadConfig(const char* modPath)
+void Config::Read(const char* modPath)
 {
 	IniFile config(std::string(modPath) + "\\config.ini");
 
@@ -21,9 +17,9 @@ void ReadConfig(const char* modPath)
 }
 
 
-void InitConfig(const char* modPath)
+void Config::Init(const char* modPath)
 {
-	ReadConfig(modPath);
+	Read(modPath);
 
 	if (RecreateCCEggmanGlitch)
 	{

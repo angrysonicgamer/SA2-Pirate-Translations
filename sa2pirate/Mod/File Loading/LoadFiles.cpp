@@ -5,7 +5,7 @@
 void ReplacePak(const std::string& file, const HelperFunctions& helperFunctions)
 {
 	std::string destination = "resource\\gd_PC\\" + file + ".prs";
-	std::string source = "resource\\gd_PC\\" + GetTranslationType() + "\\PRS\\" + file + ".pak";
+	std::string source = "resource\\gd_PC\\" + Config::TranslationType + "\\PRS\\" + file + ".pak";
 
 	helperFunctions.ReplaceFile(destination.c_str(), source.c_str());
 }
@@ -13,7 +13,7 @@ void ReplacePak(const std::string& file, const HelperFunctions& helperFunctions)
 void ReplaceGvr(const std::string& file, const HelperFunctions& helperFunctions)
 {
 	std::string destination = "resource\\gd_PC\\" + file + ".gvr";
-	std::string source = "resource\\gd_PC\\" + GetTranslationType() + "\\PRS\\" + file + ".pak";
+	std::string source = "resource\\gd_PC\\" + Config::TranslationType + "\\PRS\\" + file + ".pak";
 
 	helperFunctions.ReplaceFile(destination.c_str(), source.c_str());
 }
@@ -22,7 +22,7 @@ void ReplaceMessageFile(const std::string& file, const HelperFunctions& helperFu
 {
 	std::string destinationGamepad = "resource\\gd_PC\\Message\\" + file + ".prs";
 	std::string destinationKeyboard = "resource\\gd_PC\\MessageK\\" + file + +".prs";
-	std::string source = "resource\\gd_PC\\" + GetTranslationType() + "\\Message\\" + file + ".prs";
+	std::string source = "resource\\gd_PC\\" + Config::TranslationType + "\\Message\\" + file + ".prs";
 
 	helperFunctions.ReplaceFile(destinationGamepad.c_str(), source.c_str());
 	helperFunctions.ReplaceFile(destinationKeyboard.c_str(), source.c_str());
@@ -47,7 +47,7 @@ void ReplaceCutsceneRevampPak(const std::string& file, const HelperFunctions& he
 void ReplaceSOCFile(const std::string& file, const HelperFunctions& helperFunctions)
 {
 	std::string destination = "resource\\gd_PC\\SOC\\" + file + ".pak";
-	std::string source = "resource\\gd_PC\\" + GetTranslationType() + "\\SOC\\" + file + ".pak";
+	std::string source = "resource\\gd_PC\\" + Config::TranslationType + "\\SOC\\" + file + ".pak";
 
 	helperFunctions.ReplaceFile(destination.c_str(), source.c_str());
 }
@@ -281,7 +281,7 @@ void LoadFiles(const HelperFunctions& helperFunctions)
 	ReplaceSOCFile("howtoplay1", helperFunctions);
 	ReplaceSOCFile("pausemenu", helperFunctions);
 
-	if (GetTranslationType() == "Kudos")
+	if (Config::TranslationType == "Kudos")
 	{
 		LoadFileList(KudosOnlyPakList, ReplacePak, helperFunctions);
 	}

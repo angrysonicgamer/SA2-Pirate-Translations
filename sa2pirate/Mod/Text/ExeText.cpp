@@ -45,7 +45,7 @@ void WriteRemainingText()
 
 void InitExeText()
 {
-	if (GetTranslationType() == "Kudos")
+	if (Config::TranslationType == "Kudos")
 	{
 		WriteAdvertise(AdvertiseKudos);
 		WritePauseMenu(PauseMenuKudos);

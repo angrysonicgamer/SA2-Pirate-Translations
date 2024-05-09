@@ -53,7 +53,7 @@ void OverwriteTextForMenuOverhaul(const HelperFunctions& helperFunctions)
 
 	ReadMenuOverhaulConfig(helperFunctions);
 	
-	if (GetTranslationType() == "Kudos")
+	if (Config::TranslationType == "Kudos")
 	{
 		OverwriteText(KudosText);
 	}
@@ -66,7 +66,7 @@ void OverwriteTextForMenuOverhaul(const HelperFunctions& helperFunctions)
 
 void InitOtherMods(const HelperFunctions& helperFunctions)
 {
-	if (CutsceneRevamp && GetTranslationType() == "Vector")
+	if (CutsceneRevamp && Config::TranslationType == "Vector")
 	{
 		LoadCutsceneRevampFiles(helperFunctions);
 	}

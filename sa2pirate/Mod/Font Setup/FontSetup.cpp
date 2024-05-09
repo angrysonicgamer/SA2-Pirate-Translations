@@ -3,163 +3,65 @@
 #include <fstream>
 
 
-/* Loading font */
+// Loading font
 
-const int FontFileSize = 1016064;
-DataPointer(int*, FontDataAddress, 0xB5D64C);
+VoidFunc(UnloadFonts, 0x6B62C0);
+VoidFunc(LoadFonts, 0x6B6130);
+DataPointer(int*, AsciiSFontBuffer, 0xB5D64C);
 DataArray(byte, MainFontSetup, 0x89F3E8, 224);
 DataArray(byte, ChaoWorldFontSetup, 0x8A78D0, 224);
 
 
+const char* ConvertToCStyle(const std::string& text)
+{
+	return strcpy(new char[text.length()], text.c_str());
+}
+
 std::string GetFontPath()
 {
-	return "\\gd_PC\\" + GetTranslationType() + "\\efmsgfont_ascii24S.bin";
-}
-
-std::vector<char> ReadFontFile(std::string path)
-{
-	std::ifstream input(path, std::ios::binary);
-
-	std::vector<char> bytes(
-		(std::istreambuf_iterator<char>(input)),
-		(std::istreambuf_iterator<char>()));
-
-	input.close();
-
-	return bytes;
-}
-
-void LoadMainFont(std::string path)
-{
-	std::vector<char> fontMemory = ReadFontFile(path);
-	std::memcpy(FontDataAddress, fontMemory.data(), FontFileSize);
+	return "\\gd_PC\\" + Config::TranslationType + "\\efmsgfont_ascii24S.bin";
 }
 
 
-/* Setting up character widths */
-
-struct LetterData
+void LoadFont(const char* modPath, std::string fontPath)
 {
-	byte LetterCode;
-	byte Width;
-};
+	std::string path = std::string(modPath) + fontPath;
+	WriteData((const char**)0xB5D648, ConvertToCStyle("..\\..\\" + path)); // main font
+	WriteData((const char**)0x12E9BD0, ConvertToCStyle("..\\..\\" + path)); // chao font
+	UnloadFonts();
+	LoadFonts();
+}
 
 
-std::vector<LetterData> VanillaDCSetup
+// Automatic character widths calculation
+
+void CalculateCharacterWidths()
 {
-	{ '!', 3 }, //using chars here to visualize
-	{ '"', 9 },
-	{ '#', 19 },
-	{ '$', 13 },
-	{ '%', 17 },
-	{ '&', 14 },
-	{ '\'', 3 },
-	{ '(', 8 },
-	{ ')', 8 },
-	{ '*', 11 },
-	{ '+', 10 },
-	{ ',', 4 },
-	{ '-', 9 },
-	{ '.', 4 },
-	{ '/', 11 },
-	{ '0', 14 }, //О
-	{ '1', 8 },
-	{ '2', 12 },
-	{ '3', 11 },
-	{ '4', 13 }, //Ч
-	{ '5', 12 },
-	{ '6', 12 }, //Б
-	{ '7', 13 },
-	{ '8', 12 },
-	{ '9', 13 },
-	{ ':', 3 },
-	{ ';', 4 },
-	{ '<', 8 },
-	{ '=', 9 },
-	{ '>', 8 },
-	{ '?', 11 },
-	{ '@', 19 },
-	{ 'A', 14 }, //А
-	{ 'B', 12 }, //В
-	{ 'C', 14 }, //С
-	{ 'D', 14 }, //Д
-	{ 'E', 13 }, //Е
-	{ 'F', 12 }, //Ы
-	{ 'G', 15 }, //Ш
-	{ 'H', 15 }, //Н
-	{ 'I', 11 },
-	{ 'J', 14 }, //П
-	{ 'K', 12 }, //К
-	{ 'L', 12 }, //Л
-	{ 'M', 19 }, //М
-	{ 'N', 17 }, //И
-	{ 'O', 18 }, //Ф
-	{ 'P', 11 }, //Р
-	{ 'Q', 20 }, //Э
-	{ 'R', 13 }, //Я
-	{ 'S', 14 }, //Ь
-	{ 'T', 15 }, //Т
-	{ 'U', 15 }, //Ю
-	{ 'V', 14 }, //Ц
-	{ 'W', 22 }, //Ж
-	{ 'X', 15 }, //Х
-	{ 'Y', 14 }, //У
-	{ 'Z', 15 }, //Г
-	{ '[', 7 },
-	{ '\\', 10 },
-	{ ']', 6 },
-	{ '^', 10 },
-	{ '_', 16 },
-	{ '`', 5 },
-	{ 'a', 12 },
-	{ 'b', 11 },
-	{ 'c', 11 },
-	{ 'd', 13 },
-	{ 'e', 11 },
-	{ 'f', 10 },
-	{ 'g', 12 },
-	{ 'h', 11 },
-	{ 'i', 4 },
-	{ 'j', 8 },
-	{ 'k', 11 },
-	{ 'l', 3 },
-	{ 'm', 17 },
-	{ 'n', 11 },
-	{ 'o', 11 },
-	{ 'p', 11 },
-	{ 'q', 11 },
-	{ 'r', 10 },
-	{ 's', 10 },
-	{ 't', 10 },
-	{ 'u', 11 },
-	{ 'v', 11 },
-	{ 'w', 15 },
-	{ 'x', 12 },
-	{ 'y', 12 },
-	{ 'z', 11 },
-	{ '{', 9 },
-	{ '|', 3 },
-	{ '}', 9 },
-	{ '~', 12 }
-};
+	MainFontSetup[0] = 9; // vanilla width of space
+	ChaoWorldFontSetup[0] = 9;
 
-
-void WriteFontData()
-{
-	byte extraSpacing = 2;
-	
-	for (auto& letter : VanillaDCSetup)
+	for (int charNumber = 1; charNumber < 224; charNumber++) // starting from 1 because 0 is space (empty pixels)
 	{
-		bool isDigitOrCapital = letter.LetterCode >= '0' && letter.LetterCode <= '9' || letter.LetterCode >= 'A' && letter.LetterCode <= 'Z';
-		
-		MainFontSetup[letter.LetterCode - ' '] = isDigitOrCapital ? letter.Width + extraSpacing : letter.Width + extraSpacing - 1;
-		ChaoWorldFontSetup[letter.LetterCode - ' '] = isDigitOrCapital ? letter.Width + extraSpacing : letter.Width + extraSpacing - 1;
+		int width = 0;
+		for (int row = 0; row < 24; row++)
+		{
+			for (int column = 0; column < 24; column++)
+			{
+				if (AsciiSFontBuffer[charNumber * 24 * 24 + row * 24 + column] != 0)
+				{
+					if (column > width)
+						width = column;
+				}
+			}
+		}
+		MainFontSetup[charNumber] = width + 1;
+		ChaoWorldFontSetup[charNumber] = width + 1;
 	}
 }
 
 
-void SetUpFont(const char* modPath)
+void InitFont(const char* modPath)
 {
-	LoadMainFont(modPath + GetFontPath());
-	WriteFontData();
+	LoadFont(modPath, GetFontPath());
+	CalculateCharacterWidths();
 }

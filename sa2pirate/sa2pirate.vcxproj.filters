@@ -22,6 +22,9 @@
     <Filter Include="Mod\Anti-Piracy">
       <UniqueIdentifier>{55534405-55bc-47b9-864a-741a7e1c8687}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Render Fix">
+      <UniqueIdentifier>{a3df126e-a253-4313-9845-7d6e24830155}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
@@ -49,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="Mod\Text\ExeText_Vector.h">
       <Filter>Mod\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Render Fix\renderfix_api.h">
+      <Filter>Render Fix</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

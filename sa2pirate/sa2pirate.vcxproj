@@ -29,6 +29,7 @@
     <ClInclude Include="Mod\Text\ExeText.h" />
     <ClInclude Include="Mod\Text\ExeText_Vector.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Render Fix\renderfix_api.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />

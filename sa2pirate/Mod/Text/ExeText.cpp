@@ -39,7 +39,7 @@ void WriteRemainingText()
 	WriteData((const wchar_t**)0x401648, L"Вы действительно хотите выйти из игры?\nВесь несохранённый прогресс будет утерян."); //exit prompt
 	WriteData((const wchar_t**)0x174F59C, L"Да");
 	WriteData((const wchar_t**)0x174F55C, L"Нет");
-	WriteData((wchar_t*)0x89DD14, L"SONIC ADVENTURE 2: Предупреждение"); //exit message box title
+	WriteData((const wchar_t**)0x40278E, L"SONIC ADVENTURE 2: Предупреждение"); //exit message box title
 }
 
 

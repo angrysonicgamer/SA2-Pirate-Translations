@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "OtherMods.h"
 #include "Mod/Config/Config.h"
 #include "Mod/File Loading/LoadFiles.h"
 #include "Mod/Text/ExeText.h"

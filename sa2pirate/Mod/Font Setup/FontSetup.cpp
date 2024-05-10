@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
+#include "Render Fix/renderfix_api.h"
+#include "FontSetup.h"
 #include "Mod/Config/Config.h"
-#include <fstream>
 
 
 // Loading font
@@ -37,31 +38,47 @@ void LoadFont(const char* modPath, std::string fontPath)
 
 void CalculateCharacterWidths()
 {
+	const byte extraSpacing = 2;
+	
 	MainFontSetup[0] = 9; // vanilla width of space
 	ChaoWorldFontSetup[0] = 9;
 
 	for (int charNumber = 1; charNumber < 224; charNumber++) // starting from 1 because 0 is space (empty pixels)
 	{
-		int width = 0;
+		int maxColumn = 0;
 		for (int row = 0; row < 24; row++)
 		{
 			for (int column = 0; column < 24; column++)
 			{
 				if (AsciiSFontBuffer[charNumber * 24 * 24 + row * 24 + column] != 0)
 				{
-					if (column > width)
-						width = column;
+					if (column > maxColumn)
+						maxColumn = column;
 				}
 			}
 		}
-		MainFontSetup[charNumber] = width + 1;
-		ChaoWorldFontSetup[charNumber] = width + 1;
+		MainFontSetup[charNumber] = maxColumn + 1 + extraSpacing;
+		ChaoWorldFontSetup[charNumber] = maxColumn + 1 + extraSpacing;
 	}
 }
 
+
+// No Render Fix
 
 void InitFont(const char* modPath)
 {
 	LoadFont(modPath, GetFontPath());
 	CalculateCharacterWidths();
+}
+
+
+// Using Render Fix font API
+
+void InitFont_RF(RFAPI_CORE* pApi, const char* modPath)
+{
+	std::string fullFontPath = std::string(modPath) + GetFontPath();
+	const RFAPI_FONT* rf_font = pApi->pApiFont;
+	RFS_FONT* myfont = rf_font->LoadFontFile(fullFontPath.c_str(), FONT_FTYPE_RGBA_ASCII);
+	rf_font->SetFont(FONT_LANG_ENG, FONT_TYPE_ASCII, myfont);
+	rf_font->SetChaoFont(FONT_TYPE_ASCII, myfont);
 }

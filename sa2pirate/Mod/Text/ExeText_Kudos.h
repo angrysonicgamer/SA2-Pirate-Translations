@@ -744,5 +744,11 @@ std::vector<const char*> PauseMenuKudos
 	"",
 	"",
 	"",
-	"\aYX0D"
+	"\aYX0D",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"Are you sure you want\nto restart the stage?\nYour unsaved progress will be lost.", // fix for extra spacing of 2
 };

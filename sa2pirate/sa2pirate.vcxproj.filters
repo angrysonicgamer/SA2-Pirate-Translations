@@ -13,9 +13,6 @@
     <Filter Include="Mod\Font Setup">
       <UniqueIdentifier>{00195b1c-7d3d-48d9-9dd7-0369babdee60}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Mod\File Loading">
-      <UniqueIdentifier>{425ffbfc-83eb-49bf-9a56-7aaa7d105e61}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Mod\Text">
       <UniqueIdentifier>{dec5846f-2f80-4fee-9dd8-1f8db3e2b299}</UniqueIdentifier>
     </Filter>
@@ -24,6 +21,9 @@
     </Filter>
     <Filter Include="Render Fix">
       <UniqueIdentifier>{a3df126e-a253-4313-9845-7d6e24830155}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mod\Global">
+      <UniqueIdentifier>{a9fe5ea0-17c0-4970-a038-cae5904b1ea6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,9 +37,6 @@
     </ClInclude>
     <ClInclude Include="Mod\Font Setup\FontSetup.h">
       <Filter>Mod\Font Setup</Filter>
-    </ClInclude>
-    <ClInclude Include="Mod\File Loading\LoadFiles.h">
-      <Filter>Mod\File Loading</Filter>
     </ClInclude>
     <ClInclude Include="Mod\Text\ExeText.h">
       <Filter>Mod\Text</Filter>
@@ -56,6 +53,9 @@
     <ClInclude Include="Render Fix\renderfix_api.h">
       <Filter>Render Fix</Filter>
     </ClInclude>
+    <ClInclude Include="Mod\Global\MyMod.h">
+      <Filter>Mod\Global</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -69,9 +69,6 @@
     <ClCompile Include="Mod\Font Setup\FontSetup.cpp">
       <Filter>Mod\Font Setup</Filter>
     </ClCompile>
-    <ClCompile Include="Mod\File Loading\LoadFiles.cpp">
-      <Filter>Mod\File Loading</Filter>
-    </ClCompile>
     <ClCompile Include="Mod\Text\ExeText.cpp">
       <Filter>Mod\Text</Filter>
     </ClCompile>
@@ -80,6 +77,9 @@
     </ClCompile>
     <ClCompile Include="Mod\Anti-Piracy\CannonsCoreEggman.cpp">
       <Filter>Mod\Anti-Piracy</Filter>
+    </ClCompile>
+    <ClCompile Include="Mod\Global\MyMod.cpp">
+      <Filter>Mod\Global</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

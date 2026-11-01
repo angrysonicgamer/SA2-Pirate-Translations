@@ -6,9 +6,6 @@ public:
 	static std::string TranslationType;
 	static bool RecreateCCEggmanGlitch;
 
-	static void Read(const char* modPath);
-	static void Init(const char* modPath);
+	static void Read();
+	static void Init();
 };
-
-//std::string GetTranslationType();
-//void InitConfig(const char* modPath);

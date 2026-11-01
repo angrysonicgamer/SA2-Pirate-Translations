@@ -1,3 +1,3 @@
 #pragma once
 
-void InitOtherMods(const HelperFunctions& helperFunctions);
+void InitOtherMods();

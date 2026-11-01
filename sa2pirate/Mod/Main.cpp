@@ -1,13 +1,11 @@
 ﻿#include "pch.h"
 #include "Render Fix/renderfix_api.h"
+#include "Global/MyMod.h"
 #include "Config/Config.h"
 #include "Compatibility/OtherMods.h"
 #include "Font Setup/FontSetup.h"
-#include "File Loading/LoadFiles.h"
 #include "Text/ExeText.h"
 
-
-bool UseRenderFixFontLoading;
 
 extern "C"
 {
@@ -16,24 +14,24 @@ extern "C"
 		if (pApi->version < 1) // doesn't have font loading API
 			return;
 
-		UseRenderFixFontLoading = true;
+		Font::UseRenderFixAPI = true;
 
-		Config::Init(modPath);
-		InitFont_RF(pApi, modPath);
-		PrintDebug("SA2 Pirate Translations: used Render Fix font loading API\n");
+		MyMod::Init(modPath, helperFunctions);
+		Config::Init();
+		Font::Init_RF(pApi);
 	}
 	
 	__declspec(dllexport) void Init(const char* modPath, const HelperFunctions& helperFunctions)
 	{
-		if (!UseRenderFixFontLoading)
+		if (!Font::UseRenderFixAPI)
 		{
-			Config::Init(modPath);
-			InitFont(modPath);
-			PrintDebug("SA2 Pirate Translations: Render Fix font API not found, used my own font loading method\n");
-		}		
-		LoadFiles(helperFunctions);
+			MyMod::Init(modPath, helperFunctions);
+			Config::Init();
+			Font::Init();			
+		}
+
 		InitExeText();
-		InitOtherMods(helperFunctions);		
+		InitOtherMods();		
 	}	
 	
 	__declspec(dllexport) ModInfo SA2ModInfo = { ModLoaderVer };
